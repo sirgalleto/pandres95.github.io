@@ -26,7 +26,7 @@ $email_body = "You have received a new message from your website contact form.\n
             "Phone: $phone\n\n" .
             "Message:\n$message";
 
-$headers = "From: Pablo Dorado <pandres95@boolinc.co>\n";
+$headers = "From: Pablo Dorado <pandres95@boolinc.co>\r\n";
 $headers .= "Reply-To: $email_address";
 
 $var = mail($to,$email_subject,$email_body,$headers);
