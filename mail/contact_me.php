@@ -32,7 +32,7 @@ $headers[] = "Reply-To: {$name} <{$email_address}>";
 $headers[] = "Subject: {$subject}";
 $headers[] = "X-Mailer: PHP/".phpversion();
 
-$result = new Class();
+$result = new stdClass();
 $result->sent = mail($me, $subject, $body, implode('\r\n',$headers));
 
 print(json_encode($result));
