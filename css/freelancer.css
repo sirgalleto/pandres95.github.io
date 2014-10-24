@@ -193,17 +193,8 @@ header .intro-text .skills {
     }
 
     header .img-circle {
-        width: 25vw;
-        height: 25vw;
-    }
-
-}
-
-@media(min-width: 800px) {
-
-    header .img-circle {
-        width: 15vw;
-        height: 15vw;
+        width: 20vw;
+        height: 20vw;
     }
 
 }
@@ -246,7 +237,7 @@ section.about {
     background: #1e7ead;
 }
 
-section .separator {
+.separator {
     min-height: 5vh;
 
 }
