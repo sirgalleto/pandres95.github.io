@@ -9,6 +9,10 @@
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     /* Background properties */
     background: url('/img/background.jpg') no-repeat center center fixed;
@@ -96,13 +100,36 @@ header .links a {
     text-align: center;
 }
 
-.profile {
+#main div.profile {
     background: url('/img/profile.jpg') no-repeat center center;
     background-size: cover;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     margin-bottom: 5vh;
+}
+
+#main aside.profile {
+    flex: 2 100%;
+}
+
+#main .info {
+    flex: 1 100%;
+    font-family: 'Corbert', sans-serif;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+section.social {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+section.social a {
+    margin: 20px;
+    font-size: 25px;
 }
 
 #main h1 {
