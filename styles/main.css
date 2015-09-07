@@ -12,3 +12,17 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+header {
+    height: 70px;
+    border: medium none;
+    padding: 35px 40px;
+    margin: 0px 0px 30px;
+    background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0% 0%;
+}
+
+header img {
+    box-sizing: border-box;
+    padding: 1px 0px 5px;
+    height: 38px;
+}
