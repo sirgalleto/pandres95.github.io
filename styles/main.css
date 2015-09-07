@@ -1,0 +1,14 @@
+/**
+ * Pablo Andrés Dorado Suárez
+ * Website's CSS
+ * v1.0.0 | 20150907
+ * License: MIT
+ */
+
+body {
+    background: url(/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
