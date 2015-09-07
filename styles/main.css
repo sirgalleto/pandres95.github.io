@@ -41,8 +41,11 @@ header {
     padding: 35px 40px;
     /* Grid properties */
     display: flex;
-    align-items: center;
     justify-content: space-between;
+}
+
+header .logo a {
+    text-decoration: none;
 }
 
 header img, header .links {
@@ -70,6 +73,7 @@ header .links a {
     /* Size properties */
     box-sizing: border-box;
     margin: 0 10px;
+    height: 38px;
 }
 
 /**
