@@ -5,6 +5,10 @@
  * License: MIT
  */
 
+* {
+    color: white;
+}
+
 body {
     /* Background properties */
     background: url(/img/background.jpg) no-repeat center center fixed;
@@ -56,15 +60,30 @@ header img {
  * Footer section
  */
 footer {
-    color: white;
     /* Grid properties */
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: flex-end;
     /* Size properties */
-    padding: 0 20px 0 0;
     box-sizing: border-box;
+    padding: 0 20px 0 0;
     min-height: 20px;
     height: 10vh;
     max-height: 50px;
+}
+
+.provider {
+    display: flex;
+    justify-content: space-around;
+}
+
+.provider a {
+    width: 100px;
+}
+
+.provider img {
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 100%;
 }
