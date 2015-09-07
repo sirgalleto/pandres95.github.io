@@ -24,7 +24,7 @@ body {
     /* Grid properties */
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-flow: column wrap;
     justify-content: space-between;
 
     min-height: 100vh;
@@ -79,6 +79,7 @@ header .links a {
 /**
  *  Main section
  */
+
 #main {
     /* Grid properties */
     display: flex;
@@ -142,6 +143,30 @@ section.social a {
     font-family: 'Open Sans';
     font-weight: 300;
     font-size: 20px;
+}
+
+
+@media all and (max-width: 600px) {
+    body {
+        min-height: inherit;
+        max-height: inherit;
+        height: inherit;
+    }
+    /* We tell both sidebars to share a row */
+    #main div.profile {
+        width: 200px;
+        height: 200px;
+    }
+    #main {
+        flex: 1 auto;
+        flex-wrap: wrap;
+    }
+    #main aside.profile, #main aside.info {
+        flex: 1 auto;
+    }
+    #main aside.profile {
+        margin-bottom: 20px;
+    }
 }
 
 /**
