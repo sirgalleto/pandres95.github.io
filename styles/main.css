@@ -74,7 +74,10 @@ footer {
 }
 
 .provider {
+    font-family: 'Corbert', sans-serif;
+    font-size: 12px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
