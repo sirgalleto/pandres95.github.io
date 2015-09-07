@@ -6,23 +6,65 @@
  */
 
 body {
+    /* Background properties */
     background: url(/img/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    /* Grid properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
 }
 
+/**
+ * Header section
+ */
 header {
-    height: 70px;
-    border: medium none;
-    padding: 35px 40px;
-    margin: 0px 0px 30px;
+    /* Background properties */
     background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0% 0%;
+    border: medium none;
+    /* Size properties */
+    height: 70px;
+    padding: 35px 40px;
 }
 
 header img {
+    /* Size properties */
     box-sizing: border-box;
     padding: 1px 0px 5px;
     height: 38px;
+}
+
+/**
+ *  Main section
+ */
+#main {
+    box-sizing: border-box;
+    flex: 2 100%;
+}
+
+/**
+ * Footer section
+ */
+footer {
+    color: white;
+    /* Grid properties */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Size properties */
+    padding: 0 20px 0 0;
+    box-sizing: border-box;
+    min-height: 20px;
+    height: 10vh;
+    max-height: 50px;
 }
