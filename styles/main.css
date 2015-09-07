@@ -143,12 +143,13 @@ footer {
 }
 
 .provider a {
-    width: 100px;
     text-decoration: none;
 }
 
-.provider img {
+.provider a img {
     box-sizing: border-box;
     margin-left: 5px;
-    width: 100%;
+    height: 5vh;
+    max-height: 16px;
+    width: auto;
 }
