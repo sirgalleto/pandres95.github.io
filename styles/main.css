@@ -1,0 +1,154 @@
+/**
+ * Pablo Andrés Dorado Suárez
+ * Website's CSS
+ * v1.0.0 | 20150907
+ * License: MIT
+ */
+
+* {
+    color: white;
+}
+
+body {
+    /* Background properties */
+    background: url(/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* Grid properties */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+/**
+ * Header section
+ */
+header {
+    /* Background properties */
+    background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0% 0%;
+    border: medium none;
+    /* Size properties */
+    height: 70px;
+    padding: 35px 40px;
+    /* Grid properties */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img, header .links {
+    /* Size properties */
+    height: 38px;
+    box-sizing: border-box;
+    padding: 1px 0px 5px;
+}
+
+header .links {
+    /* Grid properties */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* Orientation properties */
+    align-self: flex-end;
+    /* Size properties */
+    box-sizing: border-box;
+}
+
+header .links a {
+    /* Font properties */
+    font-family: 'Corbert', sans-serif;
+    text-decoration: none;
+    /* Size properties */
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+
+/**
+ *  Main section
+ */
+#main {
+    /* Grid properties */
+    display: flex;
+    align-items: center;
+    /* Size properties */
+    box-sizing: border-box;
+    flex: 2 100%;
+}
+
+#main aside {
+    /* Grid properties */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Size properties */
+    flex: 1 100%;
+    /* Text properties */
+    text-align: center;
+}
+
+.profile {
+    background: url('/img/profile.jpg') no-repeat center center;
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 5vh;
+}
+
+#main h1 {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+#main h2 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/**
+ * Footer section
+ */
+footer {
+    /* Grid properties */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+    /* Size properties */
+    box-sizing: border-box;
+    padding: 0 20px 0 0;
+    min-height: 20px;
+    height: 10vh;
+    max-height: 50px;
+}
+
+.provider {
+    font-family: 'Corbert', sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.provider a {
+    width: 100px;
+    text-decoration: none;
+}
+
+.provider img {
+    box-sizing: border-box;
+    margin-left: 5px;
+    width: 100%;
+}
