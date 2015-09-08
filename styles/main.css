@@ -241,6 +241,7 @@ footer {
         min-height: 100px;
         height: 10vh;
         max-height: 150px;
+        align-items: center;
         justify-content: center;
     }
 
