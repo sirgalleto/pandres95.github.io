@@ -1,0 +1,48 @@
+<link rel="import" href="/lib/polymer/polymer.html">
+
+<dom-module id="x-copyright">
+
+<style>
+:host {
+    font-family: 'Corbert', sans-serif;
+    font-size: 12px;
+    align-self: flex-start;
+    flex: 1 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.year {
+    padding: 0 2.5px 0 2.5px;
+}
+</style>
+
+
+<template>&copy; <span class="year">{{year}}</span> <content></content></template>
+
+<script>
+
+Polymer({
+
+    is: 'x-copyright',
+
+    properties: {
+        year: {
+            type: Number,
+            value: new Date().getFullYear()
+        }
+    },
+
+    ready: function () {
+    },
+
+    attached: function () {
+    },
+
+    dettached: function () {
+    }
+
+});
+</script>
+</dom-module>
