@@ -227,6 +227,7 @@ footer {
 
 @media all and (max-width: 600px){
     footer {
+        box-sizing: border-box;
         flex-flow: column wrap;
         min-height: 100px;
         height: 10vh;
