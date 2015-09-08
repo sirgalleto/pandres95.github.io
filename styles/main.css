@@ -167,7 +167,10 @@ section.social a {
         flex: 1 auto;
     }
     #main aside.profile {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+    }
+    section.social {
+        margin-top: 10px;
     }
 }
 
@@ -191,6 +194,9 @@ section.social a {
     }
     #main aside.profile {
         margin-bottom: 20px;
+    }
+    section.social {
+        margin-top: 15px;
     }
 }
 
