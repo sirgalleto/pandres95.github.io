@@ -221,6 +221,12 @@ footer {
     max-height: 50px;
 }
 
+@media all and (max-width: 600px){
+    footer {
+        max-height: 100px;
+    }
+}
+
 .provider {
     flex: 1 100%;
     font-family: 'Corbert', sans-serif;
