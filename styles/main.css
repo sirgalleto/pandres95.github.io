@@ -214,7 +214,7 @@ section.social a {
 footer {
     /* Grid properties */
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     /* Size properties */
@@ -225,24 +225,13 @@ footer {
     max-height: 50px;
 }
 
-@media all and (max-width: 600px){
-    footer {
-        box-sizing: border-box;
-        flex-flow: column wrap;
-        min-height: 100px;
-        height: 10vh;
-        max-height: 150px;
-    }
-}
-
 .provider {
     flex: 1 100%;
     font-family: 'Corbert', sans-serif;
     font-size: 12px;
     display: flex;
-    align-self: flex-end;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .provider a {
