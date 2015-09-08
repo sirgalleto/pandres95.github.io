@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+b.hidden {
+    visibility: collapse;
+}
+
 body {
     /* Background properties */
     background: url('/img/background.jpg') no-repeat center center fixed;
