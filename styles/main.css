@@ -1,9 +1,9 @@
 /**
- * Pablo Andrés Dorado Suárez
- * Website's CSS
- * v1.0.0 | 20150907
- * License: MIT
- */
+* Pablo Andrés Dorado Suárez
+* Website's CSS
+* v1.0.0 | 20150907
+* License: MIT
+*/
 
 * {
     color: white;
@@ -17,13 +17,17 @@ b.hidden {
     visibility: collapse;
 }
 
-body {
+html {
+
     /* Background properties */
     background: url('/img/background.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body {
 
     /* Grid properties */
     display: flex;
@@ -38,8 +42,8 @@ body {
 }
 
 /**
- * Header section
- */
+* Header section
+*/
 header {
     /* Background properties */
     background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0% 0%;
@@ -81,8 +85,8 @@ header .links a {
 }
 
 /**
- *  Main section
- */
+*  Main section
+*/
 
 #main {
     /* Grid properties */
@@ -201,8 +205,8 @@ section.social a {
 }
 
 /**
- * Footer section
- */
+* Footer section
+*/
 footer {
     /* Grid properties */
     display: flex;
