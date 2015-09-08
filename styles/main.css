@@ -225,6 +225,15 @@ footer {
     max-height: 50px;
 }
 
+.provider {
+    flex: 1 100%;
+    font-family: 'Corbert', sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+}
+
 @media all and (max-width: 600px){
     footer {
         box-sizing: border-box;
@@ -233,16 +242,6 @@ footer {
         height: 10vh;
         max-height: 150px;
     }
-}
-
-.provider {
-    flex: 1 100%;
-    font-family: 'Corbert', sans-serif;
-    font-size: 12px;
-    display: flex;
-    align-self: flex-end;
-    align-items: center;
-    justify-content: space-around;
 }
 
 .provider a {
