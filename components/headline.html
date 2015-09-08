@@ -30,10 +30,6 @@
         text-align: left;
     }
 
-    .fback_removed {
-        display: none;
-    }
-
     /**
     * xType
     */
@@ -148,7 +144,6 @@
             <span class="cd-words-wrapper">
                 <content class="hidden"></content>
             </span>
-            <span class="fback">{{fallback}}</span>
         </h1>
     </section>
 </template>
@@ -158,10 +153,6 @@
 Polymer({
 
     is: 'animated-headline',
-
-    properties: {
-        fallback: String
-    },
 
     // Element Lifecycle
     ready: function() {
@@ -187,8 +178,6 @@ Polymer({
         revealAnimationDelay = 1500;
 
         initHeadline();
-        $('.fback').removeClass('fback').addClass('fback_removed');
-        $('b.hidden').removeClass('hidden');
 
         function initHeadline() {
             //insert <i> element for each letter of a changing word
