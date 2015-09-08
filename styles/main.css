@@ -14,7 +14,7 @@ a {
 }
 
 b.hidden {
-    visibility: collapse;
+    display: none;
 }
 
 body {
