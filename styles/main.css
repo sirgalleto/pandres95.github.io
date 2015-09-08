@@ -238,7 +238,7 @@ footer {
     footer {
         box-sizing: border-box;
         flex-flow: row wrap;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
     }
 
