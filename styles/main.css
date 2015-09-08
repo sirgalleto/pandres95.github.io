@@ -150,11 +150,22 @@ section.social a {
 }
 
 @media all and (max-width: 600px) {
+    body {
+        min-height: inherit;
+        max-height: inherit;
+        height: inherit;
+    }
     #main div.profile {
         width: 150px;
         height: 150px;
     }
-    
+    #main {
+        flex: 1 auto;
+        flex-wrap: wrap;
+    }
+    #main aside.profile, #main aside.info {
+        flex: 1 auto;
+    }
     #main aside.profile {
         margin-bottom: 10px;
     }
