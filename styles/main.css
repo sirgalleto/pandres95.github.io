@@ -240,6 +240,10 @@ footer {
         flex-flow: row wrap;
         align-items: flex-end;
         justify-content: center;
+
+        min-height: 50px;
+        height: 10vh;
+        max-height: 100px;
     }
 
     .provider {
