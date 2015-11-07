@@ -10,7 +10,6 @@ module.exports = function (dir) {
 
     function readFile(file) {
         if(path.extname(file) == '.js'){
-            gutil.log(`Loading ${path.basename(file, '.js')} script`);
             gulp.task(
                 path.basename(file, '.js'),
                 require(`./${path.join(dir, file)}`)(gulp, plugins, gutil)
