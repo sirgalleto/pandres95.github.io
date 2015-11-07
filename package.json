@@ -26,7 +26,7 @@
   "homepage": "https://github.com/pandres95/website#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-folder-load": "^1.0.0",
+    "gulp-folder-load": "^1.0.1",
     "gulp-sequence": "^0.4.1",
     "gulp-symlink": "^2.1.3"
   },
