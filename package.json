@@ -1,0 +1,27 @@
+{
+  "name": "pandres95.me",
+  "version": "1.0.0",
+  "description": "Pablo Andrés Dorado Suárez – Personal Webpage",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pandres95/website.git"
+  },
+  "keywords": [
+    "pandres95",
+    "homepage",
+    "website",
+    "polymer",
+    "webcomponents",
+    "contact",
+    "landing",
+    "baddesign",
+    "instapoylmer"
+  ],
+  "author": "Pablo Andrés Dorado Suárez <im@pandres95.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandres95/website/issues"
+  },
+  "homepage": "https://github.com/pandres95/website#readme"
+}
