@@ -1,4 +1,4 @@
-module.exports = (gulp, util) => {
+module.exports = (gulp) => {
     'use strict';
     var flatten = require('gulp-flatten');
 

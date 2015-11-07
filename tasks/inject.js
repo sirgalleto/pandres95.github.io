@@ -1,4 +1,4 @@
-module.exports = (gulp, util, callback) => {
+module.exports = (gulp) => {
     'use strict';
     var inject = require('gulp-inject');
 
