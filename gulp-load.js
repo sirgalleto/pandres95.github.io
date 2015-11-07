@@ -5,13 +5,14 @@ module.exports = function (dir) {
     ,   gulp    = require('gulp')
     ,   path    = require('path')
     ,   async   = require('async')
-    ,   gutil   = require('gulp-util');
+    ,   gutil   = require('gulp-util')
+    ,   gcback  = require('gulp-callback');
 
     function readFile(file) {
         if(path.extname(file) == '.js'){
             gulp.task(
                 path.basename(file, '.js'),
-                require(`./${path.join(dir, file)}`)(gulp, gutil)
+                require(`./${path.join(dir, file)}`)(gulp, gutil, gcback)
             );
         }
     }
