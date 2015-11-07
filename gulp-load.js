@@ -4,16 +4,15 @@ module.exports = function (dir) {
     var fs      = require('fs')
     ,   gulp    = require('gulp')
     ,   path    = require('path')
-    ,   async   = require('async')
-    ,   gutil   = require('gulp-util')
-    ,   gcback  = require('gulp-callback');
+    ,   async   = require('async');
+
+    dir = path.join(process.cwd(), dir);
 
     function readFile(file) {
+        file = path.join(dir, file);
+
         if(path.extname(file) == '.js'){
-            gulp.task(
-                path.basename(file, '.js'),
-                require(`./${path.join(dir, file)}`)(gulp, gutil, gcback)
-            );
+            gulp.task(path.basename(file, '.js'), require(file)(gulp));
         }
     }
 
