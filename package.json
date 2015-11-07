@@ -33,9 +33,11 @@
   "dependencies": {
     "gulp-concat": "^2.6.0",
     "gulp-flatten": "^0.2.0",
+    "gulp-if": "^2.0.0",
     "gulp-inject": "^3.0.0",
     "gulp-minify": "0.0.5",
     "gulp-uglify": "^1.4.2",
+    "gulp-useref": "^2.1.0",
     "wiredep": "^2.2.2"
   }
 }
