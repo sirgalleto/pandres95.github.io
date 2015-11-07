@@ -5,18 +5,18 @@ module.exports = (gulp, util) => {
     return () => {
         return (gulp
             .src([
+                './assets/img',
+                './assets/fonts',
                 './src/js',
                 './src/lib',
-                './src/img',
-                './src/fonts',
                 './src/styles',
                 './src/components',
             ], { read: false })
         ).pipe(symlink([
-            'dev/js',
-            'dev/lib',
             'dev/img',
             'dev/fonts',
+            'dev/js',
+            'dev/lib',
             'dev/styles',
             'dev/components'
         ], { force: true }));
