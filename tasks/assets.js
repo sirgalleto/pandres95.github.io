@@ -1,6 +1,5 @@
 module.exports = (gulp) => {
     'use strict';
-    var symlink = require('gulp-symlink');
 
     return () => {
         return (gulp
