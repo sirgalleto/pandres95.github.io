@@ -4,7 +4,7 @@ module.exports = (gulp, util, callback) => {
 
     return () => {
         return (gulp
-            .src('./src/index.html', { read: false })
+            .src('./src/index.html')
             .pipe(wiredep())
         ).pipe(gulp.dest('./dev'));
     };
