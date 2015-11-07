@@ -8,7 +8,6 @@ module.exports = (gulp, util) => {
                 './assets/img',
                 './assets/fonts',
                 './src/js',
-                './src/lib',
                 './src/styles',
                 './src/components',
             ], { read: false })
@@ -16,7 +15,6 @@ module.exports = (gulp, util) => {
             'dev/img',
             'dev/fonts',
             'dev/js',
-            'dev/lib',
             'dev/styles',
             'dev/components'
         ], { force: true }));

@@ -1,10 +1,11 @@
-module.exports = (gulp, util, callback) => {
+module.exports = (gulp, util) => {
     'use strict';
+    var symlink = require('gulp-symlink');
 
     return () => {
         return (gulp
-            .src('./src/index.html')
-        ).pipe(gulp.dest('./dev'));
+            .src([ './assets/**/*' ])
+        ).pipe(gulp.dest('./dist'));
 
     };
 };
