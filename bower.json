@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "polymer": "Polymer/polymer#^1.0.0"
+    "polymer": "Polymer/polymer#^1.0.0",
+    "reset-css": "~2.0.2011012602"
   }
 }
