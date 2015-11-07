@@ -22,7 +22,9 @@
     "tests"
   ],
   "dependencies": {
+    "components-font-awesome": "~4.4.0",
     "jquery": "~2.1.4",
+    "open-sans-fontface": "~1.4.2",
     "polymer": "Polymer/polymer#^1.0.0",
     "reset-css": "~2.0.2011012602"
   }
