@@ -1,11 +1,11 @@
 {
-  "name": "www.pandres95.me",
-  "version": "2.0.0-beta",
+  "name": "pandres95.me",
+  "version": "1.0.0",
   "authors": [
-    "Pablo Andres Dorado Suarez <pandres95@boolinc.co>"
+    "Pablo Andres Dorado Suarez <im@pandres95.me>"
   ],
   "description": "Enabling the world to get to know me",
-  "main": "index.html",
+  "main": "src/index.html",
   "keywords": [
     "polymer",
     "pandres95",
