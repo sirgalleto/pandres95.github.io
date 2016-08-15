@@ -33,7 +33,7 @@
             handleAs="json">
         </iron-ajax>
         <template is="dom-if" if="[[response.success]]">
-            <a class="container" href="[[response.data.url]]">
+            <a class="container" target="_blank" href="[[response.data.url]]">
                 <aside class="song-icon">
                     <template is="dom-if" if="[[response.data.playing]]">
                         <i class="fa fa-play">
