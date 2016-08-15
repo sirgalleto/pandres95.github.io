@@ -1,36 +1,36 @@
 module.exports = (gulp) => {
     'use strict';
-    var sequence    = require('gulp-sequence');
+    const sequence  = require('gulp-sequence');
+    const vulcanize = require('gulp-vulcanize');
+    const clean     = require('gulp-clean');
 
-    gulp.task('copy-polymer', () => {
-        return (gulp
+    gulp.task('copy', () => [
+        (gulp
             .src('./dev/lib/polymer/**')
-        ).pipe(gulp.dest('./dist/lib/polymer'));
-    });
-    gulp.task('copy-components', () => {
-        return (gulp
+        ).pipe(gulp.dest('./dist/lib/polymer')),
+        (gulp
+            .src('./dev/lib/iron-ajax/**')
+        ).pipe(gulp.dest('./dist/lib/iron-ajax')),
+        (gulp
+            .src('./dev/lib/promise-polyfill/**')
+        ).pipe(gulp.dest('./dist/lib/promise-polyfill')),
+        (gulp
             .src('./src/components/**')
-        ).pipe(gulp.dest('./dist/components'));
-    });
-    gulp.task('vulcanize', () => {
-        var action = require('gulp-vulcanize');
-        return (gulp
-            .src(['./dist/index.html'])
-            .pipe(action({
-                abspath: '',
-                excludes: [],
-                stripExcludes: false
-            }))
-        ).pipe(gulp.dest('./dist'));
-    });
-    gulp.task('clean', () => {
-        var action = require('gulp-clean');
-        return gulp.src([
-            './dist/components/**', './dist/lib/**'
-        ]).pipe(action());
-    });
+        ).pipe(gulp.dest('./dist/components'))
+    ]);
 
-    return (cb) => {
-        sequence('copy-polymer', 'copy-components', 'vulcanize', 'clean')(cb);
-    };
+    gulp.task('vulcanize', () => (gulp
+        .src('./dist/index.html')
+        .pipe(vulcanize({
+            abspath: '',
+            excludes: [],
+            stripExcludes: false
+        }))
+    ).pipe(gulp.dest('./dist')));
+
+    gulp.task('clean', () => gulp.src([
+        './dist/components/**', './dist/lib/**'
+    ]).pipe(clean()));
+
+    return cb => sequence('copy', 'vulcanize', 'clean')(cb);
 };

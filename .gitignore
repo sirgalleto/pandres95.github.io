@@ -10,5 +10,6 @@ lib
 
 # Development folders
 dev
+dist
 
 Lastfm.api
