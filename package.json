@@ -41,5 +41,8 @@
     "gulp-useref": "^2.1.0",
     "gulp-vulcanize": "^6.0.1",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "http-proxy": "^1.14.0"
   }
 }

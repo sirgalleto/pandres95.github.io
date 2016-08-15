@@ -1,0 +1,63 @@
+<link rel="import" href="../lib/iron-ajax/iron-ajax.html">
+
+<dom-module id="now-listening">
+    <style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: 1.5em;
+    }
+
+    .container .song-icon {
+        max-width: 10%;
+    }
+
+    .container .song-info {
+        width: 90%;
+    }
+
+    .now-listening--artist {
+        font-size: 1.2em;
+    }
+
+    .now-listening--title {
+        font-size: 1em;
+    }
+    </style>
+    <template>
+        <iron-ajax id="ajax"
+            auto
+            url="/api/lastfm/latest"
+            last-response="{{response}}"
+            on-response="_onResponse"
+            handleAs="json">
+        </iron-ajax>
+        <template is="dom-if" if="[[response.success]]">
+            <a class="container" href="[[response.data.url]]">
+                <aside class="song-icon">
+                    <template is="dom-if" if="[[response.data.playing]]">
+                        <i class="fa fa-play">
+                    </template>
+                    <template is="dom-if" if="[[!response.data.playing]]">
+                        <i class="fa fa-pause">
+                    </template>
+                </aside>
+                <section class="song-info">
+                    <p>[[response.data.artist]]</p>
+                    <p>[[response.data.title]]</p>
+                </section>
+            </a>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'now-listening',
+            _updateData: function() {
+                this.async(function() {
+                    this.$.ajax.generateRequest();
+                }, 30000);
+            },
+            _onResponse: function() { this._updateData(); }
+        });
+    </script>
+</dom-module>
