@@ -2,23 +2,27 @@
 
 <dom-module id="now-listening">
     <style>
-    .container {
+    .now-listening-container {
         display: flex;
         flex-direction: row;
+        align-items: center;
         margin: 1.5em;
     }
 
-    .container .song-icon {
+    .now-listening-icon {
         max-width: 1em;
         padding: 0 1em 0 0;
+        width: 10%;
+    }
+
+    .now-listening-info {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
     }
 
     .now-listening--artist {
-        font-size: 1.2em;
-    }
-
-    .now-listening--title {
-        font-size: 1em;
+        font-weight: 500;
     }
     </style>
     <template>
@@ -30,8 +34,8 @@
             handleAs="json">
         </iron-ajax>
         <template is="dom-if" if="[[response.success]]">
-            <a class="container" target="_blank" href="[[response.data.url]]">
-                <aside class="song-icon">
+            <a class="now-listening-container" target="_blank" href="[[response.data.url]]">
+                <aside class="now-listening-icon--song">
                     <template is="dom-if" if="[[response.data.playing]]">
                         <i class="fa fa-play">
                     </template>
@@ -39,9 +43,9 @@
                         <i class="fa fa-pause">
                     </template>
                 </aside>
-                <section class="song-info">
-                    <p>[[response.data.artist]]</p>
-                    <p>[[response.data.title]]</p>
+                <section class="now-listening-info">
+                    <p class="now-listening--artist">[[response.data.artist]]</p>
+                    <p class="now-listening--title">[[response.data.title]]</p>
                 </section>
             </a>
         </template>
