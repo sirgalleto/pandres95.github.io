@@ -4,8 +4,7 @@ module.exports = (gulp) => {
 
     return () => {
         return (gulp
-            .src(['./dev/lib/**/fonts/**'])
-            .pipe(flatten())
-        ).pipe(gulp.dest('./dist/fonts'));
+            .src('./dev/lib/open-sans-fontface/fonts/**')
+        ).pipe(gulp.dest('./dist/styles/fonts'));
     };
 };
