@@ -39,37 +39,39 @@
     <!-- endinject -->
 </head>
 <body>
-    <header>
-        <aside class="logo">
-            <a href="/"><img src="/img/sign.svg" alt="Sign"></a>
+    <header class="header">
+        <aside class="header-logo">
+            <a class="header-logo-link" href="/">
+                <img class="header-logo-image" src="/img/sign.svg" alt="Sign">
+            </a>
         </aside>
-        <aside class="links">
-            <a href="/blog">Blog</a>
+        <aside class="header-links">
+            <a class="header-link" href="/blog">Blog</a>
         </aside>
     </header>
-    <article id="main">
-        <aside class="profile">
-            <div class="profile"></div>
-            <h1>Pablo Andrés Dorado Suárez</h1>
-            <h2>Development Researcher</h2>
+    <article class="home">
+        <aside class="home-column home-column--profile">
+            <div class="img-profile"></div>
+            <h1 class="heading heading--name">Pablo Andrés Dorado Suárez</h1>
+            <h2 class="heading heading--title">Development Researcher</h2>
         </aside>
-        <aside class="info">
+        <aside class="home-column home-column--info">
             <now-listening></now-listening>
             Contact me at
-            <section class="social">
-                <a class="fa fa-facebook-official" href="http://facebook.com/pandres95"></a>
-                <a class="fa fa-twitter" href="http://twitter.com/pandres95"></a>
-                <a class="fa fa-instagram" href="http://instagram.com/pandres95"></a>
-                <a class="fa fa-linkedin" href="http://linkedin.com/in/pandres95"></a>
-                <a class="fa fa-github" href="http://github.com/pandres95"></a>
+            <section class="section-social">
+                <a class="section-social-link fa fa-facebook-official" href="http://facebook.com/pandres95"></a>
+                <a class="section-social-link fa fa-twitter" href="http://twitter.com/pandres95"></a>
+                <a class="section-social-link fa fa-instagram" href="http://instagram.com/pandres95"></a>
+                <a class="section-social-link fa fa-linkedin" href="http://linkedin.com/in/pandres95"></a>
+                <a class="section-social-link fa fa-github" href="http://github.com/pandres95"></a>
             </section>
         </aside>
     </article>
-    <footer>
+    <footer class="footer">
         <x-copyright>Pablo Andrés Dorado Suárez</x-copyright>
-        <div class="provider">
-            Proudly hosted by <a href="https://aws.amazon.com">
-                <img src="/img/host.svg" alt="Amazon Web Services">
+        <div class="footer section-provider">
+            Proudly hosted by <a class="footer provider-link" href="https://aws.amazon.com">
+                <img class="footer provider-img" src="/img/host.svg" alt="Amazon Web Services">
             </a>
         </div>
 

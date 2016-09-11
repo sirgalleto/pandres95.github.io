@@ -17,17 +17,13 @@ b.hidden {
     visibility: collapse;
 }
 
-html {
-
+body {
     /* Background properties */
     background: url('/img/background.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-body {
 
     /* Grid properties */
     display: flex;
@@ -36,7 +32,6 @@ body {
     justify-content: space-between;
 
     min-height: 100vh;
-    height: 100vh;
     min-width: 100vw;
     max-width: 100vw;
 }
@@ -44,38 +39,37 @@ body {
 /**
 * Header section
 */
-header {
+.header {
     /* Background properties */
     background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, transparent 100%) repeat scroll 0% 0%;
     border: medium none;
     /* Size properties */
-    height: 70px;
     padding: 35px 40px;
+    max-height: 112px;
     /* Grid properties */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
-header img, header .links {
+.header-logo-image,
+.header-links {
     /* Size properties */
     height: 38px;
     box-sizing: border-box;
     padding: 1px 0px 5px;
 }
 
-header .links {
+.header-links {
     /* Grid properties */
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
-    /* Orientation properties */
-    align-self: flex-end;
     /* Size properties */
     box-sizing: border-box;
 }
 
-header .links a {
+.header-link {
     /* Font properties */
     font-family: 'Corbert', sans-serif;
     text-decoration: none;
@@ -88,7 +82,7 @@ header .links a {
 *  Main section
 */
 
-#main {
+.home {
     /* Grid properties */
     display: flex;
     align-items: center;
@@ -97,7 +91,7 @@ header .links a {
     flex: 2 100%;
 }
 
-#main aside {
+.home-column {
     /* Grid properties */
     display: flex;
     flex-direction: column;
@@ -109,7 +103,18 @@ header .links a {
     text-align: center;
 }
 
-#main div.profile {
+.home-column--profile {
+    flex: 2 100%;
+}
+
+.home-column--info {
+    font-family: 'Corbert', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-profile {
     background: url('/img/profile.jpg') no-repeat center center;
     background-size: cover;
     width: 250px;
@@ -118,92 +123,69 @@ header .links a {
     margin-bottom: 5vh;
 }
 
-#main aside.profile {
-    flex: 2 100%;
-}
-
-#main .info {
-    flex: 1 100%;
-    font-family: 'Corbert', sans-serif;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-}
-
-section.social {
+.section-social {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
 }
 
-section.social a {
+.section-social-link {
     margin: 20px;
     font-size: 25px;
 }
 
-#main h1 {
+.heading {
     font-family: 'Open Sans';
+    font-weight: 500;
+}
+
+.heading--name {
     font-size: 24px;
     margin: 0 0 10px 0;
 }
 
-#main h2 {
-    font-family: 'Open Sans';
+.heading--title {
     font-weight: 300;
     font-size: 20px;
 }
 
 @media all and (max-width: 600px) {
-    body {
-        min-width: 100vw;
-        max-width: 100vw;
-        min-height: inherit;
-        max-height: inherit;
-        height: inherit;
-    }
-    #main div.profile {
+    .img-profile {
         width: 150px;
         height: 150px;
     }
-    #main {
+    .home {
         flex: 1 auto;
         flex-wrap: wrap;
     }
-    #main aside.profile, #main aside.info {
+    .home-column--profile, .home-column--info {
         flex: 1 auto;
     }
-    #main aside.profile {
+    .home-column--profile {
         margin-bottom: 15px;
     }
-    section.social {
+    .section-social {
         margin-top: 10px;
     }
 }
 
 @media all and (max-width: 768) {
-    body {
-        min-width: 100vw;
-        max-width: 100vw;
-        min-height: inherit;
-        max-height: inherit;
-        height: inherit;
-    }
     /* We tell both sidebars to share a row */
-    #main div.profile {
+    .img-profile {
         width: 200px;
         height: 200px;
     }
-    #main {
+    .home {
         flex: 1 auto;
         flex-wrap: wrap;
     }
-    #main aside.profile, #main aside.info {
+    .home-column--profile, .home-column--info {
         flex: 1 auto;
     }
-    #main aside.profile {
+    .home-column--profile {
         margin-bottom: 20px;
     }
-    section.social {
+    .section-social {
         margin-top: 15px;
     }
 }
@@ -211,7 +193,7 @@ section.social a {
 /**
 * Footer section
 */
-footer {
+.footer {
     /* Grid properties */
     display: flex;
     flex-flow: column wrap;
@@ -219,13 +201,13 @@ footer {
     justify-content: center;
     /* Size properties */
     box-sizing: border-box;
-    padding: 0 20px 0 20px;
+    padding: 16px 20px 16px 20px;
     min-height: 20px;
     height: 10vh;
     max-height: 50px;
 }
 
-.provider {
+.section-provider {
     flex: 1 100%;
     font-family: 'Corbert', sans-serif;
     font-size: 12px;
@@ -235,7 +217,7 @@ footer {
 }
 
 @media all and (max-width: 600px){
-    footer {
+    .footer {
         box-sizing: border-box;
         flex-flow: row wrap;
         align-items: flex-end;
@@ -246,16 +228,16 @@ footer {
         max-height: 100px;
     }
 
-    .provider {
+    .section-provider {
         justify-content: center;
     }
 }
 
-.provider a {
+.provider-link {
     text-decoration: none;
 }
 
-.provider a img {
+.provider-img {
     box-sizing: border-box;
     margin-left: 5px;
     height: 5vh;
