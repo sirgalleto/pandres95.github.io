@@ -2,6 +2,10 @@
   "name": "pandres95.me",
   "version": "1.0.0",
   "description": "Pablo Andrés Dorado Suárez – Personal Webpage",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
